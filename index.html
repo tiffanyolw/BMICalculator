@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="script.js"></script>
+
+        <title>BMI Calculator</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label>Names</label>
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label>Weight in Kilograms</label>
+                    <input type="number" name="weight" class="form-control" placeholder="Enter your weight">
+                </div>
+                <div class="mb-3">
+                    <label>Height in meters</label>
+                    <input type="number" name="height" class="form-control" placeholder="Enter your height">
+                </div>
+
+                <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>
+                <button type="reset" class="btn btn-primary" id="resetBtn">Reset</button>
+            </form>
+
+            <div id="results"></div>
+        </div>
+    </body>
+</html>
