@@ -1,5 +1,8 @@
 $(document).ready(function() {
     $("#calculateBtn").click(function() {
+        // Remove everything
+        reset();
+
         let weight = $("input[name=weight]").val();
         let height = $("input[name=height").val();
 
@@ -12,6 +15,7 @@ $(document).ready(function() {
             if (height == "") {
                 $("#heightErrorMessage").removeClass("d-none");
             }
+
             return;
         }
         
@@ -44,6 +48,12 @@ $(document).ready(function() {
     });
 
     $("#resetBtn").click(function() {
-        $("#results").html("");
+        reset();
     });
 });
+
+function reset() {
+    $("#results").html("");
+    $("#weightErrorMessage").addClass("d-none");
+    $("#heightErrorMessage").addClass("d-none");
+}
