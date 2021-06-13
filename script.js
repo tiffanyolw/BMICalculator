@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#calculateBtn").click(function() {
-        // Remove everything
+        // Remove validation and results
         reset();
 
         let weight = $("input[name=weight]").val();
@@ -9,13 +9,12 @@ $(document).ready(function() {
         // Validation
         if (weight == "" || height == "") {
             if (weight == "") {
-                $("#weightErrorMessage").removeClass("d-none");
+                $("#weightErrorMessage").html("You must enter a number for the weigh");
             }
     
             if (height == "") {
-                $("#heightErrorMessage").removeClass("d-none");
+                $("#heightErrorMessage").html("You must enter a number for the height");
             }
-
             return;
         }
         
@@ -54,6 +53,6 @@ $(document).ready(function() {
 
 function reset() {
     $("#results").html("");
-    $("#weightErrorMessage").addClass("d-none");
-    $("#heightErrorMessage").addClass("d-none");
+    $("#weightErrorMessage").html("");
+    $("#heightErrorMessage").html("");
 }
