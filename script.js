@@ -9,7 +9,7 @@ $(document).ready(function() {
         // Validation
         if (weight == "" || height == "") {
             if (weight == "") {
-                $("#weightErrorMessage").html("You must enter a number for the weigh");
+                $("#weightErrorMessage").html("You must enter a number for the weight");
             }
     
             if (height == "") {
