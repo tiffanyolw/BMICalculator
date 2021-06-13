@@ -10,6 +10,7 @@
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="style.css"/>
         <script src="script.js"></script>
 
         <title>BMI Calculator</title>
@@ -25,10 +26,12 @@
                 <div class="mb-3">
                     <label>Weight in Kilograms</label>
                     <input type="number" name="weight" class="form-control" placeholder="Enter your weight">
+                    <span class="errorMessage d-none" id="weightErrorMessage">You must enter a number for the weight</span>
                 </div>
                 <div class="mb-3">
                     <label>Height in meters</label>
                     <input type="number" name="height" class="form-control" placeholder="Enter your height">
+                    <span class="errorMessage d-none" id="heightErrorMessage">You must enter a number for the height</span>
                 </div>
 
                 <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>

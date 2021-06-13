@@ -5,8 +5,13 @@ $(document).ready(function() {
 
         // Validation
         if (weight == "" || height == "") {
-            let output = `You must enter a numeric weight and height`;
-            $("#results").html(output);
+            if (weight == "") {
+                $("#weightErrorMessage").removeClass("d-none");
+            }
+    
+            if (height == "") {
+                $("#heightErrorMessage").removeClass("d-none");
+            }
             return;
         }
         
