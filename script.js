@@ -7,12 +7,14 @@ $(document).ready(function() {
         let height = $("input[name=height").val();
 
         // Validation
-        if (weight == "" || height == "") {
-            if (weight == "") {
+        let noWeight = (weight === "");
+        let noHeight = (height === "");
+        if (noWeight || noHeight) {
+            if (noWeight) {
                 $("#weightErrorMessage").html("You must enter a number for the weight");
             }
     
-            if (height == "") {
+            if (noHeight) {
                 $("#heightErrorMessage").html("You must enter a number for the height");
             }
             return;
